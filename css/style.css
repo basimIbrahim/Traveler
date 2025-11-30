@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+  font-family: "Quicksand", sans-serif !important;
+}
+
+/* Paragraphs */
+p {
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #9a9a9a;
+  transition: color 0.3s ease;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+}
+
+/* Links */
+a {
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+}
+
+/* Container */
+.container {
+  margin: auto;
+  max-width: 1100px;
+  padding: 0 2rem;
+}
+
+/* Accent text */
+.primary-text {
+  color: #9a9a9a;
+  transition: color 0.3s ease;
+}
+
+/* Custom button (.btnn) */
+.btnn {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 2px solid #ffffff;
+  border-radius: 50px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* HERO Book button */
+.btn-primaryy {
+  color: #ffffff;
+  background-color: transparent;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.btn-primaryy:hover {
+  color: #ffffff;
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Show More buttons under Hotels & Tours */
+.btn-show-more {
+  border: 1px solid #9a9a9a;
+  background-color: transparent;
+  color: #9a9a9a;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+.btn-show-more:hover {
+  background-color: #9a9a9a;
+  color: #ffffff;
+}
+
+/* Header */
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 20;
+}
+
+/* Hero with background */
+.hero {
+  height: 100vh;
+  background: url(../images/resort1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Navbar */
+#navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.8s ease-in;
+  padding: 16px 0;
+  background-color: transparent;
+}
+
+/* Logo */
+#navBar img {
+  width: 90px;
+  margin-left: 100px;
+  transition: transform 0.3s ease;
+}
+
+/* Logo hover move */
+#navBar img:hover {
+  transform: scale(1.05);
+}
+
+/* Nav list */
+#navBar ul {
+  display: flex;
+  margin-right: 100px;
+}
+
+/* Nav links */
+#navBar ul li a {
+  padding: 15px 20px;
+  color: #9a9a9a;
+  font-weight: 600;
+}
+
+#navBar ul li a:hover {
+  color: #ffffff;
+}
+
+/* Hero content */
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 75%;
+  animation: fadeIn 0.8s ease-in;
+}
+
+/* Fade-in keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Hero heading */
+.hero .content h1 {
+  font-size: 40px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.hero .content h1:hover {
+  transform: scale(1.02);
+}
+
+/* Hero paragraph */
+.hero .content p {
+  margin: 20px 0 40px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 17px;
+  line-height: 2;
+}
+
+/* Hero dark overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgb(0, 0, 0, 0.6);
+}
+
+/* Layer hero elements above overlay */
+.hero * {
+  z-index: 10;
+}
+
+/* Section title */
+.section-title {
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Album cards (Hotels & Tours) */
+.album .card {
+  border-radius: 16px;
+  overflow: hidden;
+  border: none;
+  box-shadow: 0 10px 25px #0000004d;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Album card hover */
+.album .card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px #00000073;
+}
+
+/* Images */
+.album .bd-placeholder-img,
+.album .card-img-top {
+  display: block;
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Make photos move like logo (hover) */
+.album .card:hover .bd-placeholder-img,
+.album .card:hover .card-img-top {
+  transform: scale(1.05);
+  filter: brightness(0.95);
+}
+
+/* --- REVIEWS --- */
+.review-card {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 18px;
+  height: 100%;
+  border: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect: Lift card up */
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Header area containing Photo and Name */
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* Circular Avatar Image (smaller) */
+.review-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+  border: 2px solid #969696;
+}
+
+/* Reviewer Name (slightly smaller text) */
+.reviewer-name {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #e9e9e9;
+  margin-bottom: 2px;
+}
+
+/* The Hotel/Tour Name */
+.visited-place {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #e9e9e9;
+}
+
+/* Star Rating */
+.review-stars {
+  color: #ffc107;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+/* The Review Text (smaller) */
+.review-text {
+  font-style: italic;
+  color: #e9e9e9;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+/* FOOTER */
+#footer {
+  background-color: #121212;
+}
+
+#footer img {
+  width: 90px;
+  margin-left: 100px;
+  transition: transform 0.3s ease;
+}
+
+#footer img:hover {
+  transform: scale(1.05);
+}
+
+#footer .nav-link {
+  color: #9a9a9a !important;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+#footer .nav-link:hover {
+  color: #ffffff !important;
+}
+
+.team-list {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin-bottom: 0;
+}
+
+.team-list li {
+  margin-bottom: 6px;
+}
